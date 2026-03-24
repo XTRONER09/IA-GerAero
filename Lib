@@ -1,0 +1,82 @@
+import cv2
+import requests
+from ultralytics import YOLO
+
+# Configuración del modelo YOLO
+model = YOLO('yolov8n.pt')  # Ajusta la ruta al modelo si es necesario
+
+# Configuración de la cámara
+cap = cv2.VideoCapture(0)  # 0 para cámara predeterminada
+
+# Configuración de ESP32 (ajusta la IP)
+ESP32_IP = "192.168.1.100"  # Cambia a la IP de tu ESP32
+
+# Variables globales
+contador = 0
+linea_y = 300  # Línea imaginaria para detección
+objetos_detectados = set()
+
+def procesar_resultados(results):
+    global contador, objetos_detectados
+    for result in results:
+        for box in result.boxes:
+            clase = int(box.cls[0])
+            nombre = model.names[clase]
+
+            if nombre == "bottle":
+                x1, y1, x2, y2 = map(int, box.xyxy[0])
+                centro_y = (y1 + y2) // 2
+
+                id_obj = (x1, y1, x2, y2)
+
+                if centro_y > linea_y and id_obj not in objetos_detectados:
+                    contador += 1
+                    objetos_detectados.add(id_obj)
+                    # Activar compuerta para botella
+                    try:
+                        requests.get(f"http://{ESP32_IP}/open")
+                        print("Compuerta abierta para botella.")
+                    except:
+                        print("Error al conectar con ESP32.")
+                else:
+                    # Para otros residuos, cerrar
+                    try:
+                        requests.get(f"http://{ESP32_IP}/close")
+                    except:
+                        pass
+
+# Bucle principal para captura en tiempo real
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    # Dibujar línea imaginaria
+    cv2.line(frame, (0, linea_y), (frame.shape[1], linea_y), (0, 255, 0), 2)
+
+    # Realizar detección
+    results = model(frame)
+
+    # Procesar resultados
+    procesar_resultados(results)
+
+    # Mostrar resultados en la imagen
+    annotated_frame = results[0].plot()
+
+    # Mostrar contador
+    cv2.putText(annotated_frame, f"Botellas: {contador}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+
+    # Mostrar ventana
+    cv2.imshow('Sistema de Clasificación de Residuos', annotated_frame)
+
+    # Salir con 'q'
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Liberar recursos
+cap.release()
+cv2.destroyAllWindows()
+
+print(f"Total botellas clasificadas: {contador}")
+
+print("Botellas:", contador)

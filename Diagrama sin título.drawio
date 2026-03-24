@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.4">
+  <diagram name="Página-1" id="PPh5cCuywWla6OzIo-Wc">
+    <mxGraphModel dx="1892" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RdRAxp1cJKe1RfeqWBbU-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;li data-section-id=&quot;tswb7u&quot; data-start=&quot;250&quot; data-end=&quot;277&quot; data-cur=&quot;cursor&quot;&gt;&lt;p data-start=&quot;252&quot; data-end=&quot;277&quot; data-cur=&quot;cursor&quot;&gt;Detecta botellas con IA&lt;/p&gt;&lt;/li&gt;&lt;li data-section-id=&quot;wv9v35&quot; data-start=&quot;278&quot; data-end=&quot;307&quot; data-cur=&quot;cursor&quot;&gt;&lt;p data-start=&quot;280&quot; data-end=&quot;307&quot; data-cur=&quot;cursor&quot;&gt;Decide si son reciclables&lt;/p&gt;&lt;/li&gt;&lt;li data-section-id=&quot;1ayat36&quot; data-start=&quot;308&quot; data-end=&quot;339&quot; data-cur=&quot;cursor&quot;&gt;&lt;p data-start=&quot;310&quot; data-end=&quot;339&quot; data-cur=&quot;cursor&quot;&gt;Las dirige al bote correcto&lt;/p&gt;&lt;/li&gt;&lt;li data-section-id=&quot;keurrx&quot; data-start=&quot;340&quot; data-end=&quot;365&quot; data-cur=&quot;cursor&quot;&gt;&lt;p data-start=&quot;342&quot; data-end=&quot;365&quot; data-cur=&quot;cursor&quot;&gt;Cuenta cuántas entran&lt;/p&gt;&lt;/li&gt;&lt;li data-section-id=&quot;11hq5s6&quot; data-start=&quot;366&quot; data-end=&quot;399&quot; data-cur=&quot;cursor&quot;&gt;&lt;p data-start=&quot;368&quot; data-end=&quot;399&quot; data-cur=&quot;cursor&quot;&gt;Detecta si el bote está lleno&lt;/p&gt;&lt;/li&gt;" vertex="1">
+          <mxGeometry height="30" width="290" x="-70" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="RdRAxp1cJKe1RfeqWBbU-2" parent="1" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/security/Surveillance_Camera_Ceiling.svg;" value="" vertex="1">
+          <mxGeometry height="35.4" width="37.2" x="250" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="RdRAxp1cJKe1RfeqWBbU-3" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#01A88D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.machine_learning;" value="" vertex="1">
+          <mxGeometry height="38" width="38" x="250" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="RdRAxp1cJKe1RfeqWBbU-4" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=default;fontSize=12;spacingTop=3;image=img/lib/ibm/users/sensor.svg;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="340" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="RdRAxp1cJKe1RfeqWBbU-5" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Dashboard.svg;" value="" vertex="1">
+          <mxGeometry height="41.65" width="59" x="335.5" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="RdRAxp1cJKe1RfeqWBbU-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="DahsBoard" vertex="1">
+          <mxGeometry height="30" width="60" x="425" y="291.65" as="geometry" />
+        </mxCell>
+        <mxCell id="RdRAxp1cJKe1RfeqWBbU-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Sensor" vertex="1">
+          <mxGeometry height="30" width="60" x="410" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="RdRAxp1cJKe1RfeqWBbU-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Camara con IA" vertex="1">
+          <mxGeometry height="30" width="60" x="238.6" y="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

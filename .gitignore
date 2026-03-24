@@ -1,0 +1,37 @@
+# Entorno virtual
+.venv/
+venv/
+env/
+ENV/
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Modelos YOLO (archivos grandes)
+*.pt
+*.weights
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos de prueba/temporal
+*.jpg
+*.png
+*.jpeg
+test_*.jpg
+
+# Otros
+.env
+.env.local
+*.log
